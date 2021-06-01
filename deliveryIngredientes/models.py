@@ -10,6 +10,9 @@ class Categoria(models.Model):
         max_length=11,
         choices=STATUS,
     )
+    def __str__(self):
+        return f"{self.status}"
+    
 class Ingredientes(models.Model):
     nome = models.CharField(max_length=100, blank=True, null=True)
     preco = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
