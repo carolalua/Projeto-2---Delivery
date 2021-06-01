@@ -1,0 +1,107 @@
+body {
+	background-image:url(../img/background.png);
+	background-repeat: no repeat;
+	background-size: 100%;
+	background-position: center;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.logo{
+	width: 750px;
+	height: 750px;
+	margin-top: -90px;
+	margin-left: 90px;
+}
+
+.cadastro{
+	margin-top: 125px;
+	float: right;
+	padding-right: 200px;
+}
+
+.titulo{
+	text-align: center;
+	color: #28282D;
+	font-family: 'Segoe UI';
+}
+
+.metade{
+	height: 35px;
+	width: 160px;
+	margin-left: 22px;
+	font-family: 'Segoe UI';
+	font-size: 15px;
+}
+
+.input {
+	height: 35px;
+	width: 345px;
+	margin-left: 22px;
+	font-family: 'Segoe UI';
+	font-size: 15px;
+}
+
+.btn{
+	height: 40px;
+	width: 345px;
+	margin-left: 22px;
+	font-family: 'Segoe UI';
+	font-size: 16px;
+	color:white;
+	background-color: #28282D;
+	border: none;
+}
+
+.btn:hover{
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.opcao{
+	text-align: center;
+	font-family: 'Segoe UI';
+	font-size: 16px;
+}
+
+#facebook{
+	background-color: rgb(54, 54, 202);
+}
+
+#google{
+	background-color: rgb(243, 60, 60);
+}
+
+.btn_cad{
+	height: 40px;
+	width: 345px;
+	margin-left: 22px;
+	font-family: 'Segoe UI';
+	font-size: 16px;
+	color:white;
+	background-color: #E97400;
+	border: none;
+}
+
+.login {
+	margin-top: 200px;
+	float: right;
+	padding-right: 200px;
+}
+
+.header{
+    overflow: hidden;
+    background-color: #28282D;
+    width: 100%;
+    height: 115px;
+
+}
+
+.texto{
+	text-decoration: none;
+	color: #CF7306;
+	font-size: 20px;
+	padding-left: 20px;
+}
