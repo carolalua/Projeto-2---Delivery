@@ -5,14 +5,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-
 <body>
     <div class="header">
-        <a href="" class="texto"> HOME </a>
-        <a href="" class="texto"> RECEITA </a>
-        <a href="" class="texto"> CARRINHO </a>
-        <a href="" class="texto"> SAIR </a>
-        <a href="" class="texto"> ADMIN </a>
+        <div class="img">
+            <a href="#"> <img id="img_logo" src="./img/logo_branco.png"></a>
+        </div>
+        <div id="opcoes">
+            <a href="#" class="texto"> HOME </a>
+            <a href="" class="texto"> RECEITA </a>
+            <a href="https://carolalua.pythonanywhere.com/admin" class="texto"> ADMIN </a>
+        </div>
     </div>
+
+    {% block content %}
+    {% endblock %}
 </body>
+
 </html>
