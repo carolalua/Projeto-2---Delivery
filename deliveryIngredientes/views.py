@@ -1,11 +1,16 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Ingredientes, Receita
+from .models import Receita
 
-def listaIngredientes(request):
-    receita_i = Ingredientes.objects.all
-    return render(request, 'deliveryIngredientes/index.html', {'receita':receita_i})
-    
-def cadastrarIngredientes(request, id):
-    criarIngredientes = get_object_or_404(Receita, pk=id)
-    criarIngredientes.save()
-    return redirect('/')
+def listar_receitas(request):
+    lista_receita = Receita.objects.filter(disponivel=True)
+    contexto = {
+        'Receita': Receita,
+    }
+    return render(request, 'deliverydeIngredientes/index.html', contexto)
+
+def detalhes_produto(request):
+    produto = get_object_or_404(Produto, id=id,disponivel=True)
+    contexto = {
+        'Receita': Receita,
+    }
+    return render (request, 'deliverydeIngredientes/detalhe.html', contexto)
