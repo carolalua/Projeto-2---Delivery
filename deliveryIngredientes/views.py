@@ -6,11 +6,11 @@ def listar_receitas(request):
     contexto = {
         'Receita': Receita,
     }
-    return render(request, 'deliverydeIngredientes/index.html', contexto)
+    return render(request, 'deliveryIngredientes/index.html', contexto)
 
 def detalhes_produto(request):
     produto = get_object_or_404(Produto, id=id,disponivel=True)
     contexto = {
         'Receita': Receita,
     }
-    return render (request, 'deliverydeIngredientes/detalhe.html', contexto)
+    return render (request, 'deliveryIngredientes/detalhe.html', contexto)
