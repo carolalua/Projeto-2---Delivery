@@ -126,3 +126,40 @@ body {
 	height: 130px;
 	width: 140px;
 }
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+	background-color: rgb(255, 255, 255, 0);
+	max-width: 300px;
+	margin: auto;
+	text-align: center;
+	font-family: "Segoe UI";
+	color: black;
+	display: inline-block;
+	margin-left: 40px;
+	margin-top: 20px;
+	padding: 50px;
+}
+
+.imagem{
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+}
+
+.receita{
+	font-size: 18px;
+	padding-top: 20px;
+	font-family: 'Segoe UI';
+	font-weight: bold;
+	color: #28282D;
+}
+
+.compra{
+	background-color: #28282D;
+	color: white;
+	font-size: 15px;
+	font-family: 'Segoe UI';
+	height: 40px;
+	width: 100px;
+}
