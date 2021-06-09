@@ -1,14 +1,15 @@
+{% endblock %}
 {% extends 'base.html' %}
 {% block content %}
 
 <h2 class="titulo">RECEITAS</h2>
 
 <div class="row">
-    {% for receita in lista_receitas %}
+    {% for lista_receita in receitas %}
     <div class="card">
-        <a href="{{receita.get_absolute_url}}"
-        <img src="{{receita.imagem.url}}" class="imagem">
-        <span>{{receita.nome}}</span>
+        <a href="{{lista_receita.get_absolute_url}}"
+        <img src="{{lista_receita.imagem.url}}" class="imagem">
+        <span>{{lista_receita.nome}}</span>
         <button class="compra" >Detalhes</button>
     </div>
 
