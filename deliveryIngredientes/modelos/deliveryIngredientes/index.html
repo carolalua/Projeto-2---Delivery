@@ -9,8 +9,10 @@
     <div class="card">
         <a href="{{lista_receita.get_absolute_url}}"
         <img src="{{lista_receita.imagem.url}}" class="imagem">
-        <span>{{lista_receita.nome}}</span>
-        <button class="compra" >Detalhes</button>
+        <br>
+        <span class="receita">{{lista_receita.nome}}</span>
+        <br><br>
+        <button class="compra" > <a href="detalhes_produto/{{lista_receita.id}}">Detalhes</a></button>
     </div>
 
 {% endfor %}
