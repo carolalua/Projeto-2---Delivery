@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="offset-1 col-10 list-div">
+  <h1>{{task.nome}}</h1>
+  <a href="{{produto.get_absolute_url}}"</a>
+  <img src="{{produto.imagem.url}}" class="imagem">
+  <p>{{produto.descricao}}</p>
+  <p>{{produto.preco}}</p>
+</div>
+
+{% endblock %}
