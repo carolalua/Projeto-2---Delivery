@@ -8,6 +8,7 @@ def listar_receitas(request):
 
 @login_required
 def detalhes_produto(request, id):
+    
     produto = get_object_or_404(Receita, id=id)
 
     return render (request, 'deliverydeIngredientes/detalhe.html', {'receita': produto})
