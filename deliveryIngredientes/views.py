@@ -6,9 +6,8 @@ def listar_receitas(request):
 
     return render(request, 'deliveryIngredientes/index.html', {'receitas':lista_receita})
 
-def detalhes_produto(request):
-    produto = get_object_or_404(Produto, id=id,disponivel=True)
-    contexto = {
-        'Receita': Receita,
-    }
-    return render (request, 'deliveryIngredientes/detalhe.html', contexto)
+@login_required
+def detalhes_produto(request, id):
+    produto = get_object_or_404(Receita, id=id)
+
+    return render (request, 'deliverydeIngredientes/detalhe.html', {'receita': produto})
