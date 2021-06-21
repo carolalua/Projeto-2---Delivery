@@ -17,8 +17,12 @@ class Ingredientes(models.Model):
         return f"{self.nome}, {self.preco}, {self.quantidade}, {self.status}"
 class Receita(models.Model):
     nome = models.CharField(max_length=100, blank=True, null=True)
-    preco = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
     descricao = models.TextField()
-    ingrediente = models.ForeignKey('Ingredientes', verbose_name="Ingredientes", on_delete=models.CASCADE)
+    preco = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    disponivel = models.BooleanField(default=True)
+    data_criacao = models.DateTimeField(default=now)
+    data_ultima_atualizacao = models.DateTimeField(default=now)
+    imagem = models.ImageField(upload_to='imagens-produtos', default='default.jpg')
+    ingredientes = models.ForeignKey('Ingredientes', verbose_name="Ingredientes", on_delete=models.CASCADE, blank=True, null=True)
     def __str__(self):
-        return f"{self.nome},{self.preco},{self.descricao}"
+        return self.nome
