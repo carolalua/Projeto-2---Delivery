@@ -1,12 +1,22 @@
 {% extends 'base.html' %}
+{% block title %} Detalhe Produto {% endblock %}
 {% block content %}
 
-<div class="offset-1 col-10 list-div">
-  <h1>{{task.nome}}</h1>
-  <a href="{{produto.get_absolute_url}}"</a>
-  <img src="{{produto.imagem.url}}" class="imagem">
-  <p>{{produto.descricao}}</p>
-  <p>{{produto.preco}}</p>
-</div>
+<table>
+    <td class="info">
+        <h1 class="titulo_rec">{{receita.nome}}</h1>
+        <p>Descrição: {{receita.descricao}}</p>
+        <p>Preco: {{receita.preco}}</p>
+        <p>Quantidade para uma pessoa:</p>
+        <div class="tabela">
+        {% for ingredientes in receita.ingredientes.all %}
+            <p>{{ingredientes}}</p>
+        {% endfor %}
+        </div>
+    </td>
+    <td>
+        <img src="{{receita.imagem.url}}" class="foto_receita">
+    </td>
+</table>
 
 {% endblock %}
