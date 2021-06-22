@@ -23,6 +23,6 @@ class Receita(models.Model):
     data_criacao = models.DateTimeField(default=now)
     data_ultima_atualizacao = models.DateTimeField(default=now)
     imagem = models.ImageField(upload_to='imagens-produtos', default='default.jpg')
-    ingredientes = models.ForeignKey('Ingredientes', verbose_name="Ingredientes", on_delete=models.CASCADE, blank=True, null=True)
+    ingredientes = models.ManyToManyField(Ingredientes)
     def __str__(self):
         return self.nome
